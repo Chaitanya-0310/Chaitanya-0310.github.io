@@ -1,0 +1,6 @@
+data/
+out/
+lucene/lib/
+lucene/classes/
+tantivy/target/
+tantivy/Cargo.lock

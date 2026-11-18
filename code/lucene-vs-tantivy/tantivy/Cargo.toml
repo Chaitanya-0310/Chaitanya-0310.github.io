@@ -1,0 +1,11 @@
+[package]
+name = "bench"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tantivy = "=0.26.1"
+
+[profile.release]
+codegen-units = 1
+lto = true
