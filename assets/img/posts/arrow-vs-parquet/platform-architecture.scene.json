@@ -1,0 +1,27 @@
+{
+  "title": "Food-delivery analytics platform",
+  "fontFamily": 5,
+  "elements": [
+    { "kind": "text", "x": 540, "y": 10, "text": "Hot path: seen in seconds", "fontSize": 22 },
+    { "kind": "text", "x": 540, "y": 470, "text": "Cold path: minutes to hours, cheap to scan", "fontSize": 22 },
+
+    { "id": "os",  "kind": "rectangle", "x": 40,   "y": 220, "width": 200, "height": 110, "text": "Order service\n\none order\nat a time", "fontSize": 20, "backgroundColor": "#ffd8cc" },
+    { "id": "kf",  "kind": "rectangle", "x": 290,  "y": 220, "width": 200, "height": 110, "text": "Kafka topic\n\"orders\"\n\nrows as Avro", "fontSize": 20, "backgroundColor": "#ffd8cc" },
+
+    { "id": "fl",  "kind": "rectangle", "x": 560,  "y": 60,  "width": 200, "height": 110, "text": "Stream job\n(Flink)\n\nclean + enrich", "fontSize": 20, "backgroundColor": "#ffd8cc" },
+    { "id": "pn",  "kind": "rectangle", "x": 810,  "y": 60,  "width": 200, "height": 110, "text": "Real-time store\n(Pinot)\n\nrecent orders", "fontSize": 20, "backgroundColor": "#ffd8cc" },
+    { "id": "db",  "kind": "rectangle", "x": 1060, "y": 60,  "width": 200, "height": 110, "text": "Live ops\ndashboard\n\nseconds old", "fontSize": 20, "backgroundColor": "#ffd8cc" },
+
+    { "id": "iw",  "kind": "rectangle", "x": 560,  "y": 340, "width": 200, "height": 110, "text": "Lake writer\n\nsmall Parquet files\nevery few minutes", "fontSize": 20, "backgroundColor": "#c3fae8" },
+    { "id": "cp",  "kind": "rectangle", "x": 810,  "y": 340, "width": 200, "height": 110, "text": "Compaction\n\nmerges into\nbig Parquet files", "fontSize": 20, "backgroundColor": "#c3fae8" },
+    { "id": "an",  "kind": "rectangle", "x": 1060, "y": 340, "width": 200, "height": 110, "text": "Reports + ML\n\nSpark / Trino /\nDuckDB → Arrow", "fontSize": 20, "backgroundColor": "#d0ebff" },
+
+    { "kind": "arrow", "from": "os", "to": "kf" },
+    { "kind": "arrow", "from": "kf", "to": "fl" },
+    { "kind": "arrow", "from": "fl", "to": "pn" },
+    { "kind": "arrow", "from": "pn", "to": "db" },
+    { "kind": "arrow", "from": "kf", "to": "iw" },
+    { "kind": "arrow", "from": "iw", "to": "cp" },
+    { "kind": "arrow", "from": "cp", "to": "an" }
+  ]
+}

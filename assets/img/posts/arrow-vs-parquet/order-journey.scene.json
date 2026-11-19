@@ -1,0 +1,18 @@
+{
+  "title": "One order's journey",
+  "fontFamily": 5,
+  "elements": [
+    { "kind": "text", "x": 40, "y": 10, "text": "One order's journey (typical timings, not measured)", "fontSize": 22 },
+    { "id": "t0", "kind": "rectangle", "x": 40,   "y": 70, "width": 190, "height": 120, "text": "0 s\n\nOrder placed\nin the app", "fontSize": 20, "backgroundColor": "#ffd8cc" },
+    { "id": "t1", "kind": "rectangle", "x": 270,  "y": 70, "width": 190, "height": 120, "text": "milliseconds\n\nAppended to\nKafka as Avro", "fontSize": 20, "backgroundColor": "#ffd8cc" },
+    { "id": "t2", "kind": "rectangle", "x": 500,  "y": 70, "width": 190, "height": 120, "text": "a few seconds\n\nFlink → Pinot,\non the dashboard", "fontSize": 20, "backgroundColor": "#ffd8cc" },
+    { "id": "t3", "kind": "rectangle", "x": 730,  "y": 70, "width": 190, "height": 120, "text": "1–5 minutes\n\nIn a small\nParquet file", "fontSize": 20, "backgroundColor": "#c3fae8" },
+    { "id": "t4", "kind": "rectangle", "x": 960,  "y": 70, "width": 190, "height": 120, "text": "about 1 hour\n\nCompacted into\na big file", "fontSize": 20, "backgroundColor": "#c3fae8" },
+    { "id": "t5", "kind": "rectangle", "x": 1190, "y": 70, "width": 190, "height": 120, "text": "next day\n\nIn reports,\nread as Arrow", "fontSize": 20, "backgroundColor": "#d0ebff" },
+    { "kind": "arrow", "from": "t0", "to": "t1" },
+    { "kind": "arrow", "from": "t1", "to": "t2" },
+    { "kind": "arrow", "from": "t2", "to": "t3" },
+    { "kind": "arrow", "from": "t3", "to": "t4" },
+    { "kind": "arrow", "from": "t4", "to": "t5" }
+  ]
+}

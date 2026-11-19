@@ -1,0 +1,15 @@
+{
+  "title": "Which format?",
+  "fontFamily": 5,
+  "elements": [
+    { "id": "q", "kind": "rectangle", "x": 290, "y": 40, "width": 470, "height": 70, "text": "What is the data doing right now?", "fontSize": 24, "backgroundColor": "#f1efe8" },
+    { "id": "a", "kind": "rectangle", "x": 40,  "y": 200, "width": 220, "height": 130, "text": "Arriving one\nevent at a time\n\nAvro", "fontSize": 22, "backgroundColor": "#ffd8cc" },
+    { "id": "b", "kind": "rectangle", "x": 290, "y": 200, "width": 220, "height": 130, "text": "Stored for\nanalytics scans\n\nParquet (or ORC)", "fontSize": 22, "backgroundColor": "#c3fae8" },
+    { "id": "c", "kind": "rectangle", "x": 540, "y": 200, "width": 220, "height": 130, "text": "Being worked on\nin memory\n\nArrow", "fontSize": 22, "backgroundColor": "#d0ebff" },
+    { "id": "d", "kind": "rectangle", "x": 790, "y": 200, "width": 220, "height": 130, "text": "Read by a human\nor a tiny export\n\nCSV / JSON", "fontSize": 22, "backgroundColor": "#fff3bf" },
+    { "kind": "arrow", "from": "q", "to": "a" },
+    { "kind": "arrow", "from": "q", "to": "b" },
+    { "kind": "arrow", "from": "q", "to": "c" },
+    { "kind": "arrow", "from": "q", "to": "d" }
+  ]
+}
